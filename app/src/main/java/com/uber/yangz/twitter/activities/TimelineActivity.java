@@ -3,6 +3,7 @@ package com.uber.yangz.twitter.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -98,6 +99,8 @@ public class TimelineActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
+                Snackbar.make(lvTweets, throwable.getMessage(), Snackbar.LENGTH_LONG).show();
+                swipeContainer.setRefreshing(false);
             }
         });
     }
