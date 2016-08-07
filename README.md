@@ -21,6 +21,11 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [x] "Compose" button is using a FloatingActionButton
+* [x] Use Parcelable instead of Serializable using the popular Parceler library.
+* [x] While composing a tweet, user can see a character counter with characters remaining for tweet out of 140
+* [x] If the tweet content is invalid (aka empty or over 140 characters), tweet button is disabled and word count label is red.
+* [x] User can refresh tweets timeline by pulling down to refresh (i.e pull-to-refresh)
+* [x] Links in tweets are clickable and will launch the web browser
 
 
 ## Video Walkthrough
