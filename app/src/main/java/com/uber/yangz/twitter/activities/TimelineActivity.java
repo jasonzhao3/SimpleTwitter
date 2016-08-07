@@ -3,6 +3,7 @@ package com.uber.yangz.twitter.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -29,6 +30,8 @@ public class TimelineActivity extends AppCompatActivity {
     private ArrayList<Tweet> tweetsArray;
     private TweetsArrayAdaptor tweetsAdaptor;
     private ListView lvTweets;
+    private SwipeRefreshLayout swipeContainer;
+
     private final int REQUEST_CODE = 20;
 
     @Override
@@ -38,12 +41,26 @@ public class TimelineActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // tweets list
         lvTweets = (ListView) findViewById(R.id.lv_tweets);
         tweetsArray = new ArrayList<>();
         tweetsAdaptor = new TweetsArrayAdaptor(this, tweetsArray);
         lvTweets.setAdapter(tweetsAdaptor);
 
+        // swipe refresher
+        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                populateHomeTimeline(0);
+            }
+        });
+        swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
 
+        // floating button
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.btn_compose_tweet);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +70,8 @@ public class TimelineActivity extends AppCompatActivity {
             }
         });
 
+
+        // API call
         client = TwitterApp.getRestClient();
         populateHomeTimeline(0);
 
@@ -66,10 +85,15 @@ public class TimelineActivity extends AppCompatActivity {
     }
 
     private void populateHomeTimeline(int page) {
+        final int currPage = page;
         client.getHomeTimeline(page, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
+                if (currPage == 0) {
+                    tweetsAdaptor.clear();
+                }
                 tweetsAdaptor.addAll(Tweet.fromJSONArray(response));
+                swipeContainer.setRefreshing(false);
             }
 
             @Override
