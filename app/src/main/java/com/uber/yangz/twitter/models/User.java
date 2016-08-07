@@ -3,17 +3,21 @@ package com.uber.yangz.twitter.models;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
+@Parcel
 public class User {
 //    @Column(name = "screenName")
-    private String screenName;
+    String screenName;
 
 //    @Column(name = "handle")
-    private String name;
+    String name;
+    String profileImageUrl;
+    long id;
 
-    private String profileImageUrl;
-
-    private long id;
+    public User() {
+        // empty constructor needed by the Parceler library
+    }
 
     public User(JSONObject object) {
         try {

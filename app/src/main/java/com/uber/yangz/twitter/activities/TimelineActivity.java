@@ -17,6 +17,7 @@ import com.uber.yangz.twitter.utils.TwitterApp;
 import com.uber.yangz.twitter.utils.TwitterClient;
 
 import org.json.JSONArray;
+import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
@@ -77,4 +78,14 @@ public class TimelineActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // REQUEST_CODE is defined above
+        if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
+            // Extract name value from result extras
+            Tweet newTweet = Parcels.unwrap(data.getParcelableExtra("tweet"));
+            tweetsAdaptor.insert(newTweet, 0);
+            tweetsAdaptor.notifyDataSetChanged();
+        }
+    }
 }

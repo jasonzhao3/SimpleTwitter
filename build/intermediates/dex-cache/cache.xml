@@ -9,20 +9,6 @@
         <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/scribe-codepath-0.0.3_6a36b7de7715dc8a94248f6789e31856fd1946b5/classes.dex" />
     </item>
     <item
-        jar="/Users/yangz/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_31d8962e48245751761e68e23efed102057980cc/classes.dex" />
-    </item>
-    <item
-        jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.codepath.libraries/android-oauth-handler/1.0.0/jars/classes.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="07aa74f1dee90d22616f6aa98a65bea8458cf671">
-        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.codepath.libraries-android-oauth-handler-1.0.0_4e60d85d85d96ad4ffc6c0a5131a09ac16f7bad0/classes.dex" />
-    </item>
-    <item
         jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.1.1/jars/classes.jar"
         jumboMode="true"
         revision="24.0.0"
@@ -30,39 +16,11 @@
         <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.1.1_aeb9887a3b64a58f640e94605c8ff3527926e8df/classes.dex" />
     </item>
     <item
-        jar="/Users/yangz/.gradle/caches/modules-2/files-2.1/com.michaelpardo/activeandroid/3.1.0-SNAPSHOT/4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08/activeandroid-3.1.0-SNAPSHOT.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08">
-        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/activeandroid-3.1.0-SNAPSHOT_c58fe11592ff3df73205142b5b1140bcea10fcb3/classes.dex" />
-    </item>
-    <item
-        jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="17b08e50d5cdec22b6c96eeb34081d2d7a930097">
-        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_050cbf7b6ce7c721844b0a2c30c4e21aaa290ede/classes.dex" />
-    </item>
-    <item
         jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.android.support/design/24.1.1/jars/classes.jar"
         jumboMode="true"
         revision="24.0.0"
         sha1="e195bd694d5389acfba27ff4fdfa64c4c65b2c05">
         <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.1.1_b29e5b4251062f82a44133356d2cf1c240b5a68d/classes.dex" />
-    </item>
-    <item
-        jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/libs/internal_impl-24.1.1.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
-        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.1.1_17ca0dede88824d418558a043cdcd8db73748ca7/classes.dex" />
-    </item>
-    <item
-        jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/jars/classes.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
-        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.1.1_f79583edb37bb57331cc983b8ae60176b84db6f6/classes.dex" />
     </item>
     <item
         jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/classes.jar"
@@ -79,20 +37,6 @@
         <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/httpclient-4.3.6_32f47e1667a77911fefc721245103aa47c585b65/classes.dex" />
     </item>
     <item
-        jar="/Users/yangz/Uber/simple-twitter/app/libs/org.apache.http.legacy.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="fa331331b626ee78c52bea16ce1e34b39e666ce5">
-        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/2/org.apache.http.legacy_250d0ff7d0c988e27ad74eeefaa42dd893366fd3/classes.dex" />
-    </item>
-    <item
-        jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.1.1/jars/classes.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
-        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.1.1_b5adc11fc7f45c0da98ee9c868b825a5d83baf2d/classes.dex" />
-    </item>
-    <item
         jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/jp.wasabeef/picasso-transformations/2.1.0/jars/classes.jar"
         jumboMode="true"
         revision="24.0.0"
@@ -107,13 +51,6 @@
         <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.1.1_60eec4214937d71029f196e38fa215a029982c87/classes.dex" />
     </item>
     <item
-        jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.1.1/jars/classes.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="f62e763609f65e47dc6c498760a4accf02776788">
-        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.1.1_f9626220dd876a3c71858719aa68ab6f3b187fea/classes.dex" />
-    </item>
-    <item
         jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.codepath.libraries/android-oauth-handler/1.0.0/jars/libs/codepath-utils.jar"
         jumboMode="true"
         revision="24.0.0"
@@ -121,10 +58,80 @@
         <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/codepath-utils_7e419bac88f29926e970d3f2b73aac74551aa249/classes.dex" />
     </item>
     <item
+        jar="/Users/yangz/.gradle/caches/modules-2/files-2.1/org.parceler/parceler-api/1.1.1/d081ad6f7c51627ebe2dbf157cc525cbf5e9c821/parceler-api-1.1.1.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="d081ad6f7c51627ebe2dbf157cc525cbf5e9c821">
+        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/parceler-api-1.1.1_dcf6a1b7f7d33d01246b85da7df150234d8b09ac/classes.dex" />
+    </item>
+    <item
+        jar="/Users/yangz/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_31d8962e48245751761e68e23efed102057980cc/classes.dex" />
+    </item>
+    <item
+        jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.codepath.libraries/android-oauth-handler/1.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="07aa74f1dee90d22616f6aa98a65bea8458cf671">
+        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.codepath.libraries-android-oauth-handler-1.0.0_4e60d85d85d96ad4ffc6c0a5131a09ac16f7bad0/classes.dex" />
+    </item>
+    <item
+        jar="/Users/yangz/.gradle/caches/modules-2/files-2.1/com.michaelpardo/activeandroid/3.1.0-SNAPSHOT/4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08/activeandroid-3.1.0-SNAPSHOT.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08">
+        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/activeandroid-3.1.0-SNAPSHOT_c58fe11592ff3df73205142b5b1140bcea10fcb3/classes.dex" />
+    </item>
+    <item
+        jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="19aa09ba727b7c90099692f2f4bd2d43f6dd560e">
+        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_050cbf7b6ce7c721844b0a2c30c4e21aaa290ede/classes.dex" />
+    </item>
+    <item
+        jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.1.1/jars/libs/internal_impl-24.1.1.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="f78c2f395cb096f9dc1dc07e729922b8fcd3c4f5">
+        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.1.1_17ca0dede88824d418558a043cdcd8db73748ca7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="1256c10604bb098490eab070d76754ac5ceab35c">
+        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.1.1_f79583edb37bb57331cc983b8ae60176b84db6f6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/yangz/Uber/simple-twitter/app/libs/org.apache.http.legacy.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="fa331331b626ee78c52bea16ce1e34b39e666ce5">
+        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/2/org.apache.http.legacy_250d0ff7d0c988e27ad74eeefaa42dd893366fd3/classes.dex" />
+    </item>
+    <item
+        jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="c936c1bd42f0c018c18920c7bec619ef056b24f8">
+        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.1.1_b5adc11fc7f45c0da98ee9c868b825a5d83baf2d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="f62e763609f65e47dc6c498760a4accf02776788">
+        <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.1.1_f9626220dd876a3c71858719aa68ab6f3b187fea/classes.dex" />
+    </item>
+    <item
         jar="/Users/yangz/Uber/simple-twitter/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="24.0.0"
-        sha1="b03460e7809e0c58e2711ca2bd77b9c01ffa61b6">
+        sha1="f60de7892e7611e5779da3353c5c96ff8c410b99">
         <dex dex="/Users/yangz/Uber/simple-twitter/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9c730686c37269020914bb7eede03c04f0cc7189/classes.dex" />
     </item>
     <item

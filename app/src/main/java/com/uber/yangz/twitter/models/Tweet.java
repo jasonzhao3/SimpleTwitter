@@ -5,22 +5,20 @@ import com.uber.yangz.twitter.utils.Utils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.util.ArrayList;
 
-
-
-/*
- * This is a temporary, sample model that demonstrates the basic structure
- * of a SQLite persisted Model object. Check out the ActiveAndroid wiki for more details:
- * https://github.com/pardom/ActiveAndroid/wiki/Creating-your-database-model
- * 
- */
+@Parcel
 public class Tweet {
-    private Long id;
-    private String createdAt;
-    private User user;
-    private String body;
+    Long id;
+    String createdAt;
+    String body;
+    User user;
+
+    public Tweet() {
+        // empty constructor needed by the Parceler library
+    }
 
 	// Parse model from JSON
 	public Tweet(JSONObject object){

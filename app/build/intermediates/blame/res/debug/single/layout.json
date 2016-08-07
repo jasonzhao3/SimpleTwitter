@@ -120,12 +120,12 @@
         "source": "/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_screen_content_include.xml"
     },
     {
-        "merged": "/Users/yangz/Uber/simple-twitter/app/build/intermediates/res/merged/debug/layout/activity_compose.xml",
-        "source": "/Users/yangz/Uber/simple-twitter/app/src/main/res/layout/activity_compose.xml"
-    },
-    {
         "merged": "/Users/yangz/Uber/simple-twitter/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
         "source": "/Users/yangz/Uber/simple-twitter/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.1.1/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/yangz/Uber/simple-twitter/app/build/intermediates/res/merged/debug/layout/activity_compose.xml",
+        "source": "/Users/yangz/Uber/simple-twitter/app/src/main/res/layout/activity_compose.xml"
     },
     {
         "merged": "/Users/yangz/Uber/simple-twitter/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",

@@ -8,12 +8,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.loopj.android.http.JsonHttpResponseHandler;
 import com.uber.yangz.twitter.R;
+import com.uber.yangz.twitter.models.Tweet;
 import com.uber.yangz.twitter.utils.TwitterApp;
 import com.uber.yangz.twitter.utils.TwitterClient;
-import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.json.JSONObject;
+import org.parceler.Parcels;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -37,10 +39,10 @@ public class ComposeActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                         Intent data = new Intent();
-                        // Pass relevant data back as a result
-                        data.putExtra("tweet", "asdf");
+                        Tweet tweet = new Tweet(response);
+                        data.putExtra("tweet", Parcels.wrap(tweet));
                         data.putExtra("code", 200);
-                        setResult(RESULT_OK, data); // set result code and bundle data for response
+                        setResult(RESULT_OK, data);
                         finish();
                     }
 
