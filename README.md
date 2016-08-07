@@ -26,12 +26,13 @@ The following **optional** features are implemented:
 * [x] If the tweet content is invalid (aka empty or over 140 characters), tweet button is disabled and word count label is red.
 * [x] User can refresh tweets timeline by pulling down to refresh (i.e pull-to-refresh)
 * [x] Links in tweets are clickable and will launch the web browser
+* [x] Custom app icon with a black larry bird :p
 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/BcM5RTb.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/jgutEFw.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
