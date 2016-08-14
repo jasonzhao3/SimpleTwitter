@@ -6,4 +6,9 @@
     <string name="title_activity_timeline">Home</string>
     <string name="tweet">Tweet</string>
     <string name="tweet_hint">What\'s happening?</string>
+    <string name="profile">profile</string>
+    <string name="title_activity_compose">title_activity_compose</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -29,7 +29,7 @@ public class BaseTimelineFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.base_fragment_timeline, container, false);
+        View v = inflater.inflate(R.layout.fragment_base_timeline, container, false);
         lvTweets = (ListView) v.findViewById(R.id.lv_tweets);
         lvTweets.setAdapter(tweetsAdaptor);
 
@@ -55,5 +55,9 @@ public class BaseTimelineFragment extends Fragment {
     public void prependTweet(Tweet tweet) {
         tweetsAdaptor.insert(tweet, 0);
         tweetsAdaptor.notifyDataSetChanged();
+    }
+
+    public String getScreenName() {
+        return "";
     }
 }

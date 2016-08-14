@@ -7,6 +7,8 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.uber.yangz.twitter.R;
@@ -50,5 +52,17 @@ public class TimelineActivity extends AppCompatActivity {
             // Extract name value from result extras
             Tweet newTweet = Parcels.unwrap(data.getParcelableExtra("tweet"));
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_timeline, menu);
+        return true;
+    }
+
+    public void onProfileView(MenuItem mi) {
+        Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
+        i.putExtra("screenName", "yang_bot2");
+        startActivity(i);
     }
 }

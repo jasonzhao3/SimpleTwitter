@@ -13,7 +13,10 @@ public class User {
 //    @Column(name = "handle")
     String name;
     String profileImageUrl;
-    long id;
+    String tagline;
+    Integer followersCount;
+    Integer followingsCount;
+    Long id;
 
     public User() {
         // empty constructor needed by the Parceler library
@@ -25,6 +28,9 @@ public class User {
             this.screenName = object.getString("screen_name");
             this.name = object.getString("name");
             this.profileImageUrl = object.getString("profile_image_url");
+            this.tagline = object.getString("description");
+            this.followersCount = object.getInt("followers_count");
+            this.followingsCount = object.getInt("friends_count");
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -41,6 +47,14 @@ public class User {
 
     public long getId() {
         return id;
+    }
+
+    public String getTagline() {
+        return tagline;
+    }
+
+    public String getCountStat() {
+        return String.format("%s Followers  %s Following", followersCount, followingsCount);
     }
 
 }
