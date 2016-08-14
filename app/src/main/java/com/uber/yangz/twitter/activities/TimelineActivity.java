@@ -3,35 +3,20 @@ package com.uber.yangz.twitter.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ListView;
 
-import com.loopj.android.http.JsonHttpResponseHandler;
 import com.uber.yangz.twitter.R;
-import com.uber.yangz.twitter.adaptors.TweetsArrayAdaptor;
+import com.uber.yangz.twitter.adaptors.TimelineFragmentPagerAdapter;
 import com.uber.yangz.twitter.models.Tweet;
-import com.uber.yangz.twitter.utils.EndlessScrollListener;
-import com.uber.yangz.twitter.utils.TwitterApp;
-import com.uber.yangz.twitter.utils.TwitterClient;
 
-import org.json.JSONArray;
 import org.parceler.Parcels;
 
-import java.util.ArrayList;
-
-import cz.msebera.android.httpclient.Header;
 
 public class TimelineActivity extends AppCompatActivity {
-
-    private TwitterClient client;
-    private ArrayList<Tweet> tweetsArray;
-    private TweetsArrayAdaptor tweetsAdaptor;
-    private ListView lvTweets;
-    private SwipeRefreshLayout swipeContainer;
 
     private final int REQUEST_CODE = 20;
 
@@ -42,24 +27,10 @@ public class TimelineActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // tweets list
-        lvTweets = (ListView) findViewById(R.id.lv_tweets);
-        tweetsArray = new ArrayList<>();
-        tweetsAdaptor = new TweetsArrayAdaptor(this, tweetsArray);
-        lvTweets.setAdapter(tweetsAdaptor);
-
-        // swipe refresher
-        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
-        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                populateHomeTimeline(0);
-            }
-        });
-        swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
-                android.R.color.holo_green_light,
-                android.R.color.holo_orange_light,
-                android.R.color.holo_red_light);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.vp_timeline);
+        viewPager.setAdapter(new TimelineFragmentPagerAdapter(getSupportFragmentManager()));
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs_timeline);
+        tabLayout.setupWithViewPager(viewPager);
 
         // floating button
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.btn_compose_tweet);
@@ -70,39 +41,6 @@ public class TimelineActivity extends AppCompatActivity {
                 startActivityForResult(i, REQUEST_CODE);
             }
         });
-
-
-        // API call
-        client = TwitterApp.getRestClient();
-        populateHomeTimeline(0);
-
-        lvTweets.setOnScrollListener(new EndlessScrollListener() {
-            @Override
-            public boolean onLoadMore(int page, int totalItemsCount) {
-                populateHomeTimeline(page);
-                return true;
-            }
-        });
-    }
-
-    private void populateHomeTimeline(int page) {
-        final int currPage = page;
-        client.getHomeTimeline(page, new JsonHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
-                if (currPage == 0) {
-                    tweetsAdaptor.clear();
-                }
-                tweetsAdaptor.addAll(Tweet.fromJSONArray(response));
-                swipeContainer.setRefreshing(false);
-            }
-
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
-                Snackbar.make(lvTweets, throwable.getMessage(), Snackbar.LENGTH_LONG).show();
-                swipeContainer.setRefreshing(false);
-            }
-        });
     }
 
     @Override
@@ -111,8 +49,6 @@ public class TimelineActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
             // Extract name value from result extras
             Tweet newTweet = Parcels.unwrap(data.getParcelableExtra("tweet"));
-            tweetsAdaptor.insert(newTweet, 0);
-            tweetsAdaptor.notifyDataSetChanged();
         }
     }
 }
