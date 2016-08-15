@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
+import com.uber.yangz.twitter.R;
 import com.uber.yangz.twitter.models.Tweet;
 import com.uber.yangz.twitter.utils.EndlessScrollListener;
 
@@ -42,6 +43,7 @@ public class MentionsTimelineFragment extends BaseTimelineFragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getActivity().setTitle(R.string.title_activity_timeline_home);
         populateMentionsTimeline(0);
     }
 

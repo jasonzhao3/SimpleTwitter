@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,14 +55,5 @@ public class BaseTimelineFragment extends Fragment {
     public void prependTweet(Tweet tweet) {
         tweetsAdaptor.insert(tweet, 0);
         tweetsAdaptor.notifyDataSetChanged();
-    }
-
-    public String getScreenName() {
-        return "";
-    }
-
-    public void onClickProfileImage(View ivprofileimage) {
-        Log.d("DEBUG", "click the profile image!!!");
-
     }
 }
