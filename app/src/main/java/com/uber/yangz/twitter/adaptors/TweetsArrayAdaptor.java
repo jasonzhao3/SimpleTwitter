@@ -43,15 +43,6 @@ public class TweetsArrayAdaptor extends ArrayAdapter<Tweet> {
             viewHolder.ivAvatar = (ImageView) convertView.findViewById(R.id.iv_avatar);
             viewHolder.tvScreenname = (TextView) convertView.findViewById(R.id.tv_screen_name);
             viewHolder.tvBody = (TextView) convertView.findViewById(R.id.tv_body);
-            viewHolder.ivAvatar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent i = new Intent(getContext(), ProfileActivity.class);
-                    i.putExtra("screenName", tweet.getUser().getScreenName());
-                    getContext().startActivity(i);
-                }
-            });
-
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -64,6 +55,14 @@ public class TweetsArrayAdaptor extends ArrayAdapter<Tweet> {
                 load(tweet.getUser().getProfileImageUrl()).
                 transform(new RoundedCornersTransformation(5, 5)).
                 into(viewHolder.ivAvatar);
+        viewHolder.ivAvatar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(), ProfileActivity.class);
+                i.putExtra("screenName", tweet.getUser().getScreenName());
+                getContext().startActivity(i);
+            }
+        });
 
         return convertView;
     }
