@@ -48,7 +48,9 @@ public class UserTimelineFragment extends BaseTimelineFragment {
 
     private void populateUserTimeline(int page) {
         final int currPage = page;
-        client.getUserTimeline(page, "yang_bot2", new JsonHttpResponseHandler() {
+        OnGetScreenNameListener listener = (OnGetScreenNameListener)getContext();
+        String screenName = listener.onGetScreenName();
+        client.getUserTimeline(page, screenName, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 if (currPage == 0) {
@@ -64,5 +66,9 @@ public class UserTimelineFragment extends BaseTimelineFragment {
                 swipeContainer.setRefreshing(false);
             }
         });
+    }
+
+    public interface OnGetScreenNameListener {
+        String onGetScreenName();
     }
 }

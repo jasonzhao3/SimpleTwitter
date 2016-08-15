@@ -13,6 +13,7 @@ import android.view.View;
 
 import com.uber.yangz.twitter.R;
 import com.uber.yangz.twitter.adaptors.TimelineFragmentPagerAdapter;
+import com.uber.yangz.twitter.fragments.HomeTimelineFragment;
 import com.uber.yangz.twitter.models.Tweet;
 
 import org.parceler.Parcels;
@@ -21,6 +22,7 @@ import org.parceler.Parcels;
 public class TimelineActivity extends AppCompatActivity {
 
     private final int REQUEST_CODE = 20;
+    private TimelineFragmentPagerAdapter timelinePageAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,9 @@ public class TimelineActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.vp_timeline);
-        viewPager.setAdapter(new TimelineFragmentPagerAdapter(getSupportFragmentManager()));
+        timelinePageAdapter = new TimelineFragmentPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(timelinePageAdapter);
+
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs_timeline);
         tabLayout.setupWithViewPager(viewPager);
 
@@ -51,6 +55,9 @@ public class TimelineActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE) {
             // Extract name value from result extras
             Tweet newTweet = Parcels.unwrap(data.getParcelableExtra("tweet"));
+
+            HomeTimelineFragment homeTimelineFragment = (HomeTimelineFragment) timelinePageAdapter.getRegisteredFragment(0);
+            homeTimelineFragment.prependTweet(newTweet);
         }
     }
 

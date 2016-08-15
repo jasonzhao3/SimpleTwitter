@@ -53,7 +53,9 @@ public class HeaderFragment extends Fragment {
         tvCountStat = (TextView) v.findViewById(R.id.tv_count_stat);
         ivProfileImage = (ImageView) v.findViewById(R.id.iv_profile_image);
 
-        client.getUserInfo(new JsonHttpResponseHandler() {
+        OnGetScreenNameListener listener = (OnGetScreenNameListener)getContext();
+        String screenName = listener.onGetScreenName();
+        client.getUserInfo(screenName, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 User user = new User(response);
@@ -67,5 +69,9 @@ public class HeaderFragment extends Fragment {
                         into(ivProfileImage);
             }
         });
+    }
+
+    public interface OnGetScreenNameListener {
+        String onGetScreenName();
     }
 }

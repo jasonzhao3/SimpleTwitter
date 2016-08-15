@@ -2,12 +2,11 @@ package com.uber.yangz.twitter.adaptors;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 
 import com.uber.yangz.twitter.fragments.HomeTimelineFragment;
 import com.uber.yangz.twitter.fragments.MentionsTimelineFragment;
 
-public class TimelineFragmentPagerAdapter extends FragmentPagerAdapter {
+public class TimelineFragmentPagerAdapter extends SmartFragmentStatePagerAdapter {
 
     private String tableTitles[] = new String[] { "Home", "Mentions" };
 

@@ -41,6 +41,10 @@ public class User {
         return name + " @" + screenName;
     }
 
+    public String getScreenName() {
+        return screenName;
+    }
+
     public String getProfileImageUrl() {
         return profileImageUrl;
     }
